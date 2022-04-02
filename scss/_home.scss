@@ -1,0 +1,391 @@
+.s-hero{
+    width: 100%;
+    min-height: 100vh;
+    background: url("../img/home.png") no-repeat center center;
+    background-size: cover;
+    background-attachment: fixed;
+    .opacity{
+        width: 100%;
+        height: inherit;
+        background:linear-gradient(180deg, transparent,transparent, rgba(255, 255, 255, 0.4),transparent, transparent);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    // background: linear-gradient(180deg, #2400FF 0%, #090046 100%);
+    .container{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .main-hero{
+            width: 100%;
+            height: 100vh;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            h1{
+                font-size: 5.5rem;
+                text-transform: uppercase;
+                padding-bottom: 1.3rem;
+                color: $azul;
+                span{
+                    color: $dourado;
+                }
+            }
+            .btn-sobre{
+                bottom: 10rem;
+                position: absolute;
+            }
+            #btn-sobre{
+                background-color: $azul;
+            }
+        }
+    }
+    @include responsive(1280px){
+        .container{
+            .main-hero{
+                h1{
+                    font-size: 4.5rem;
+                }
+            }
+        }
+    }
+    @include responsive(1060px){
+        .container{
+            .main-hero{
+                h1{
+                    font-size: 3.5rem;
+                }
+            }
+        }
+    }
+    @include responsive(785px){
+        .container{
+            .main-hero{
+                h1{
+                    font-size: 3rem;
+                    text-align: center;
+                }
+            }
+        }
+    }
+}
+
+#s-home-trabalhe{
+    .container{
+        min-height: 100vh;
+    }
+}
+
+.s-contato{
+    padding: 8rem 0rem;
+    background: url("../img/principios.png") no-repeat center center;
+    background-size: cover;
+    background-attachment: fixed;
+    .container{
+        .main-contato-home{
+            display: flex;
+            width: 100%;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            .text{
+                h2{
+                    font-size: 4rem;
+                    text-transform: uppercase;
+                    padding-bottom: 1rem;
+                    color: $white;
+                }
+            }
+            form{
+                width: 100%;
+                display: flex;
+                margin-top: 5rem;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+                input, textarea{
+                    width: 100%;
+                    border: 0.3rem solid transparent;
+                    transition: all .3s;
+                    font-size: 3rem;
+                }
+                input{
+                    background-color: #ccc;
+                    border-radius: 1rem;
+                    padding: 2rem;
+                    margin-bottom: 2rem;
+                }
+                textarea{
+                    padding: 2rem;
+                    min-height: 20rem;
+                    border-radius: 1rem;
+                    background-color: #ccc;
+                    resize: none;
+                }
+                input::placeholder,
+                textarea::placeholder{
+                    font-size: 2.5rem;
+                }
+                input:hover,
+                input:focus,
+                textarea:hover,
+                textarea:focus{
+                    outline: none;
+                    border-color: $azul;
+                    background-color: rgb(255, 255, 255);
+                    box-shadow: rgb(152, 195, 245) -1rem 1rem 1rem;
+                }
+                button{
+                    margin-top: 2rem;
+                }
+            }
+            @include responsive(600px){
+                form{
+                    input{
+                        padding: 1.4rem;
+                        font-size: 1.8rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.s-info{
+    padding-top: 10rem;
+    background: url("../img/principios.png") no-repeat center center;
+    background-size: cover;
+    background-attachment: fixed;
+    .container{
+        .main-info{
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            overflow: hidden;
+            padding: 2rem 0rem;
+            position: relative;
+            p{
+                font-size: 2.4rem;
+            }
+            p, span, li{
+                color: $white;
+            }
+            .text-main{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+                h2{
+                    text-align: center;
+                    text-transform: uppercase;
+                    color: $white;
+                    margin-bottom: 2rem;
+                    font-size: 3rem;
+                }
+                .text{
+                    margin-top: 2rem;
+                    display: flex;
+                    align-items: flex-start;
+                    gap: 2.5rem;
+                    justify-content: space-between;
+                    p{
+                        width: 100%;
+                        max-width: 48%;
+                        text-align: justify;
+                    }
+                    .text-right{
+                        span, ul li{
+                            width: 100%;
+                            font-size: 2.4rem;
+                            text-align: justify;
+                            @include responsive(800px){
+                                text-align: initial;
+                            }
+                        }
+                        ul{
+                            margin-left: 3rem;
+                            li{
+                                list-style:disc;
+                                &:not(:first-child){
+                                    margin-top: 1rem;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .tex-main-trabalho{
+                margin-top: 10rem;
+                padding: 0rem 4rem;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                gap: 2rem;
+                h2{
+                    font-size: 4.5rem;
+                    color: $white;
+                    text-transform: uppercase;
+                }
+                p{
+                    margin: 2rem 0rem;
+                    font-size: 2.5rem;
+                }
+                ul{
+                    li{
+                        list-style: disc;
+                        font-size: 2.5rem;
+                        margin-left: 3rem;
+                    }
+                }
+            }
+            a{
+                margin-top: 4rem;
+                width: 100%;
+                text-align: center;
+            }
+        }
+    }
+    @include responsive(800px){
+        .container{
+            .main-info{
+                .text-main{
+                    .text{
+                        flex-direction: column;
+                        p{
+                            max-width: 100%;
+                        }
+                    }
+                }
+                .tex-main-trabalho{
+                    padding: 0rem;
+                    flex-direction: column;
+                    .tex-left, .tex-right{
+                        display: flex;
+                        flex-direction: column;
+                        align-items: flex-start;
+                        justify-content: center;
+                        width: 100%;
+                        h2{
+                            width: 100%;
+                            text-align: center;
+                            font-size: 3rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.s-galeria{
+    min-height: 100vh;
+    display: flex;
+    overflow: hidden;
+    align-items: center;
+    justify-content: center;
+    background: url("../img/principios.png") no-repeat center center;
+    background-size: cover;
+    background-attachment: fixed;
+    .container{
+        .main-galeria{
+            padding-top: 1rem;
+            position: relative;
+            .swiper-wrapper{
+                display: flex;
+                align-items: center;
+            }
+            .swiper-slide{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            .swiper-pagination{
+                top: 0;
+                left: auto;
+                right: 0;
+                width: 10rem;
+                height: 1rem;
+            }
+            .swiper-button-next{
+                color: #FFFF;
+                @include responsive(600px){
+                    display: none;
+                }
+            }
+            .swiper-button-prev{
+                color: #FFFFFF;
+                @include responsive(600px){
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+.s-produto{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url("../img/principios.png") no-repeat center center;
+    background-size: cover;
+    background-attachment: fixed;
+    .container{
+        .main-produto{
+            position: relative;
+            padding-top: 1rem;
+            overflow: hidden;
+            .swiper-button-next{
+                color: $azul;
+                @include responsive(700px){
+                    display: none;
+                }
+            }
+            .swiper-button-prev{
+                color: #FFFFFF;
+                @include responsive(700px){
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+.s-parceiros{
+    padding: 10rem 0rem;
+    background: url("../img/principios.png") no-repeat center center;
+    background-size: cover;
+    background-attachment: fixed;
+    .main-parceiros{
+        h2{
+            text-align: center;
+            font-size: 4.5rem;
+            color: $white;
+            text-transform: uppercase;
+            margin-bottom: 4rem;
+        }
+    }
+    @include responsive(700px){
+        .main-parceiros{
+            h2{
+                font-size: 3rem;
+            }
+        }
+    }
+}
+
+.pre-carregamento{
+    width: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 2023;
+    background-color: $white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}

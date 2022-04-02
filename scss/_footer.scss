@@ -1,0 +1,130 @@
+footer{
+    padding-top: 8rem;
+    background: url("../img/principios.png") no-repeat center center;
+    background-size: cover;
+    background-attachment: fixed;
+    .container{
+        .main-footer-home{
+            width: 100%;
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            .img{
+                width: 100%;
+                max-width: 50%;
+                display: flex;
+                align-items: flex-start;
+                justify-content: center;
+                flex-direction: column;
+                img{
+                    width: 100%;
+                    height: 45rem;
+                }
+                a{
+                    margin: 1rem 0rem;
+                    text-transform: uppercase;
+                }
+            }
+            .item-text{
+                width: 100%;
+                max-width: 50%;
+                margin-left: 1rem;
+                .items{
+                    li{
+                        font-size: 3rem;
+                        color: $white;
+                        &:not(:first-child){
+                            margin-top: 4.5rem;
+                        }
+                    }
+                }
+                .redes-sociais{
+                    margin-top: 4.5rem;
+                    display: flex;
+                    li{
+                        img{
+                            width: 5rem;
+                            height: 5rem;
+                        }
+                        &:not(:first-child){
+                            margin-left: 1rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .f-footer{
+        width: 100%;
+        background-color: #ccc;
+        padding: 2rem 0rem;
+        h4{
+            text-transform: uppercase;
+            text-align: center;
+            font-size: 2rem;
+        }
+    }
+    @include responsive(1000px){
+        .container{
+            .main-footer-home{
+                flex-direction: column;
+                .img{
+                    max-width: 100%;
+                    iframe{
+                        width: 100%;
+                        max-width: 100%;
+                    }
+                }
+                .item-text{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    justify-self: center;
+                    max-width: 100%;
+                }
+            }
+        }
+    }
+    @include responsive(600px){
+        .container{
+            .main-footer-home{
+                .img{
+                    align-items: center;
+                }
+                .item-text{
+                    align-items: center;
+                    .items{
+                        li{
+                            text-align: center;
+                            font-size: 2rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.f-trabalhar{
+    padding-top: 8rem;
+    .container{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        .main-footer-home{
+            margin-top: 8rem;
+        }
+    }
+}
+
+footer{
+    .text{
+        h2{
+            font-size: 4rem;
+            text-transform: uppercase;
+            padding-bottom: 1rem;
+            color: $white;
+        }
+    }
+}
